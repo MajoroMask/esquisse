@@ -72,17 +72,17 @@ esquisse_server <- function(id,
       }
 
       # Launch import modal if no data at start
-      if (!is.null(import_from)) {
-        observe({
-          if (is.null(data_chart$data)) {
-            datamods::import_modal(
-              id = ns("import-data"),
-              from = import_from,
-              title = i18n("Import data to create a graph")
-            )
-          }
-        })
-      }
+      # if (!is.null(import_from)) {
+      #   observe({
+      #     if (is.null(data_chart$data)) {
+      #       datamods::import_modal(
+      #         id = ns("import-data"),
+      #         from = import_from,
+      #         title = i18n("Import data to create a graph")
+      #       )
+      #     }
+      #   })
+      # }
 
       # Launch import modal if button clicked
       observeEvent(input$launch_import_data, {
